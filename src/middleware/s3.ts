@@ -14,8 +14,6 @@ const s3 = new aws.S3();
 function asyncUpload(req, file) {
   return new Promise((resolve, reject) => {
 
-    console.log("upload");
-
     const params = {
       ACL: "public-read",
       Bucket: "takeus-test-bucket-01",

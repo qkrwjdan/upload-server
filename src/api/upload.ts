@@ -20,9 +20,7 @@ router.post(
   s3.imageUploadToS3,
   async (req: Request, res: Response) => {
     try {
-      console.log(req.body.photos);
-
-      res.send("hi");
+      res.send(req.body.photos);
     } catch (error) {
       console.error(error.message);
       res.status(500).send("Server Error");

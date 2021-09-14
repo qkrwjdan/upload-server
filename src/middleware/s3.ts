@@ -16,7 +16,7 @@ function asyncUpload(req, file) {
 
     const params = {
       ACL: "public-read",
-      Bucket: "takeus-test-bucket-01",
+      Bucket: "takeus-bucket",
       Body: fs.createReadStream(file.path),
       Key: `image/dogs/${file.originalname}`,
     };

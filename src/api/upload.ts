@@ -9,6 +9,10 @@ const router = Router();
 const UPLOAD_PATH = "uploads";
 const upload = multer({ dest: `${UPLOAD_PATH}/`, fileFilter: imageFilter });
 
+router.get("/", async (req:Request, res: Response) => {
+  res.send({ data: "server working!"});
+})
+
 /**
  *  @route POST api/upload/
  *  @desc File upload to AWS S3

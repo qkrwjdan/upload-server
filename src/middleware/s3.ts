@@ -5,7 +5,7 @@ import config from "../config";
 
 aws.config.update({
   accessKeyId: config.awsAccessKey,
-  secretAccessKey: config.awsPrivateAcessKey,
+  secretAccessKey: config.awsPrivateAccessKey,
   region: "ap-northeast-2",
 });
 
@@ -37,6 +37,11 @@ function asyncUpload(req, file) {
 }
 
 async function uploadParallel(req, next) {
+  if(!req.files) {
+    console.log('empty files');
+    return next();
+  }
+
   const promises = req.files.map((file) => asyncUpload(req, file));
   await Promise.all(promises);
   next();

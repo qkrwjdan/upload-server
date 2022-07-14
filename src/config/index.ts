@@ -17,12 +17,5 @@ export default {
    * aws access key for image upload to s3
    */
   awsAccessKey: process.env.AWS_ACCESS_KEY,
-  awsPrivateAcessKey: process.env.AWS_PRIVATE_ACCESS_KEY,
-
-  /**
-   * Your secret sauce
-   */
-  jwtSecret: process.env.JWT_SECRET,
-  jwtAlgorithm: process.env.JWT_ALGO,
-
+  awsPrivateAccessKey: process.env.AWS_PRIVATE_ACCESS_KEY,
 };

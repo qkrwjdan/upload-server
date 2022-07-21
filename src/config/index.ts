@@ -18,4 +18,5 @@ export default {
    */
   awsAccessKey: process.env.AWS_ACCESS_KEY,
   awsPrivateAccessKey: process.env.AWS_PRIVATE_ACCESS_KEY,
+  bucketName: process.env.S3_BUCKET_NAME,
 };

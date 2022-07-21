@@ -16,9 +16,9 @@ function asyncUpload(req, file) {
 
     const params = {
       ACL: "public-read",
-      Bucket: "takeus-bucket",
+      Bucket: config.bucketName,
       Body: fs.createReadStream(file.path),
-      Key: `image/dogs/${file.originalname}`,
+      Key: `photos/${file.originalname}`,
     };
 
     s3.upload(params, (err, data) => {

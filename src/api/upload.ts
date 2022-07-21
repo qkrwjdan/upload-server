@@ -20,7 +20,7 @@ router.get("/", async (req:Request, res: Response) => {
  */
 router.post(
   "/",
-  upload.array("photos", 5),
+  upload.array("photos", 20),
   s3.imageUploadToS3,
   async (req: Request, res: Response) => {
     try {
